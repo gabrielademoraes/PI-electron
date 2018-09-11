@@ -2,18 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Teste do dropdown</title>
+    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
+    <h1>Escolha uma opção no dropdown</h1>
+    <select id="dropdown" onchange="getDropdownElement()">
+      <option value="0" selected="selected"></option>
+      <option value="1">Opinião sobre o framework</option>
+      <option value="2">Versão Utilizada</option>
+    </select>
+    <div class="versao" id="versaoElectron">
+      <!-- All of the Node.js APIs are available in this renderer process. -->
+      We are using Node.js <script>document.write(process.versions.node)</script>,
+      Chromium <script>document.write(process.versions.chrome)</script>,
+      and Electron <script>document.write(process.versions.electron)</script>.
+  </div>
+  <div class ="opiniao" id="opiniao">
+    <p>Framework muito interessante</p>
+  </div>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
   </body>
+  <script src="./renderer.js"></script>
 </html>
